@@ -1,0 +1,45 @@
+---
+const { title, blockText, imageUrl="", imageAlt="", imageW="", imageH="", imageClass=""} = Astro.props;
+import '../styles/global.css';
+import {Image} from 'astro:assets';
+---
+<style> 
+    .block-container
+    { 
+        display: grid;
+        border: 1.5px solid blue;
+        border-radius: 5px;
+        padding:16px;
+    }
+
+    .block{
+        display:flex;
+    }
+
+    .block img{
+        margin-left: auto;
+    }
+
+    p{
+        font-family: var(--source-sans-3);
+    }
+
+    @media (max-width: 600px) {
+        .block{
+            flex-direction: column;
+        }
+    }
+
+</style> 
+
+<section class = "block-container">
+    <div class = "block">
+        <div class = "block-text"> 
+            <h2> { title } </h2>
+            <p> { blockText } </p>
+            <slot />
+        </div>
+        {imageUrl && <Image class={imageClass} src={imageUrl} alt={imageAlt} width={imageW} height={imageH} />}
+    </div>
+</section>
+

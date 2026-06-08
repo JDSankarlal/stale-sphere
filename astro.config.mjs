@@ -1,5 +1,19 @@
 // @ts-check
-import { defineConfig } from 'astro/config';
+import { defineConfig, fontProviders } from 'astro/config';
+
 
 // https://astro.build/config
-export default defineConfig({});
+export default defineConfig({
+    fonts:[{
+        provider: fontProviders.fontsource(),
+        name:"Public Sans",
+        cssVariable: "--font-public",
+    },
+    {
+        provider: fontProviders.fontsource(),
+        name: "Source Sans 3",
+        cssVariable: "--source-sans-3",
+    },
+]
+
+});

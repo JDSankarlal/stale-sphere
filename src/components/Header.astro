@@ -1,0 +1,74 @@
+---
+const pages = import.meta.glob<{pageTitle: string}>('../pages/*.astro', {eager:true});
+const links = Object.entries(pages).map(([filePath, module]) => {
+    const name = filePath.replace('../pages/','').replace('.astro','');
+    const href = name === 'index' ? '/' : `/${name}`;
+    return { name, href, title: module.pageTitle};
+});
+links.sort((a, b) => (a.href === '/' ? -1 : b.href === '/' ? 1 : 0));
+---
+<nav>
+    <h1> Alex Ilojoski </h1>
+    <ul>
+        {links.map((link) => (
+            <li>
+                <a href = {link.href}>{link.title}</a>
+            </li>
+        ))}
+    </ul>
+    <a href="/volunteer" class="cta-button">Get a Lawn Sign →</a>
+</nav>
+
+<style>
+    nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0.75rem 2rem;
+        background-color: white;
+        border-bottom: 1px solid #e0e0e0;
+        margin-bottom: 2rem;
+    }
+
+    ul {
+        display: flex;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    .cta-button {
+        background-color: #2563eb;
+        color: white;
+        padding: 0.5rem 1rem;
+        border-radius: 5px;
+        text-decoration: none;
+        white-space: nowrap;
+        font-family: var(--font-public);
+        transition: background-color 0.2s ease;
+        margin-left: 2rem;
+    }
+
+    .cta-button:hover {
+        background-color: color-mix(in srgb, #2563eb, black 15%);
+    }
+
+    h1 {
+        margin:0;
+        margin-right: auto;
+        margin-left: 2%;
+        padding:0;
+    }
+
+    li, a {
+        font-family: var(--font-public);
+        display: inline-block;
+        transition: all 0.3s easea 0s;
+        text-decoration: none;
+    }
+
+    li a:hover{
+        color: blue;
+    }
+
+
+</style>

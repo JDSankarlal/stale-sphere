@@ -9,7 +9,7 @@ export const pageTitle = "Home"
 
 <Layout>
     <div class = "card-grid">
-        <CampaignBlock title = "[CAMPAIGN SLOGAN", blockText = "Lorem impsum", imageUrl="https://placehold.co/425x250", imageAlt="Placeholder", imageW="425", imageH="250", imageClass="hero-image">
+        <CampaignBlock title = "Lorem ipsum dolor sit amet", blockText = "Lorem impsum", imageUrl="https://placehold.co/425x250", imageAlt="Placeholder", imageW="425", imageH="250", imageClass="hero-image">
            <div class="button-group">
                <button class="hero-button" type="button">Get a Lawn Sign</button>
                <button class="hero-button sec" type="button">Donate</button>
@@ -17,13 +17,17 @@ export const pageTitle = "Home"
         </CampaignBlock>
         <CampaignBlock title = "Meet Alex", blockText = "Alex is fighting for you!" />
         <CampaignBlock title = "About", blockText = "Learn more about Alex's background and experience." />
-        <CampaignBlock title = "The Platform", blockText = "Find out where Alex stands on the issues that matter to you." />
         <CampaignBlock title = "Contact", blockText = "Get in touch with the campaign team." />
         <CampaignBlock title = "Volunteer", blockText = "Join the campaign and help get out the vote." />
+        <CampaignBlock title = "The Platform", blockText = "Find out where Alex stands on the issues that matter to you." />
     </div>
 </Layout>
 
 <style>
+
+    body{
+        background-color: --body-bg-color;
+    }
      
     .button-group{
         display:flex;
@@ -65,7 +69,7 @@ export const pageTitle = "Home"
     .card-grid {
         display: grid;
         max-width: 90%;
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
         gap: 16px;
         margin: 0 auto;
     }
@@ -76,7 +80,7 @@ export const pageTitle = "Home"
     }
     .card-grid > :global(:nth-child(1))
     {
-        grid-column: span 3;
+        grid-column: span 2;
         
     }
     .card-grid > :global(:nth-child(2))
@@ -91,18 +95,18 @@ export const pageTitle = "Home"
 
      .card-grid > :global(:nth-child(4))
     {
-        grid-column: span 3;
-        grid-row: span 3;
+        grid-column: 2;
     }
 
      .card-grid > :global(:nth-child(5))
     {
-        grid-column: 1;
+        grid-column: 3;
     }
 
       .card-grid > :global(:nth-child(6))
     {
-        grid-column: 1;
+        grid-column: span 3;
+        grid-row: span 3;
     }
    
 
@@ -119,10 +123,13 @@ export const pageTitle = "Home"
         
     }
 
-body, h1, h2, h3, h4, p,
+h1, h2, h3, h4, p,
 figure, blockquote, dl, dd {
     padding:26px 26px 26px 26px;
 }
 
+body {
+    margin: 0;
+}
 
 </style>

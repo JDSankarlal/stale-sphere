@@ -23,17 +23,18 @@ links.sort((a, b) => (a.href === '/' ? -1 : b.href === '/' ? 1 : 0));
     nav {
         display: flex;
         align-items: center;
-        justify-content: space-between;
         padding: 0.75rem 2rem;
-        background-color: white;
+        background-color: var(--header-bg-color);
         border-bottom: 1px solid #e0e0e0;
         margin-bottom: 2rem;
+        width: 100;
     }
 
     ul {
         display: flex;
         list-style: none;
-        gap: 2rem;
+        gap: 6rem;
+        font-weight: 700;
     }
 
     .cta-button {
@@ -45,7 +46,7 @@ links.sort((a, b) => (a.href === '/' ? -1 : b.href === '/' ? 1 : 0));
         white-space: nowrap;
         font-family: var(--font-public);
         transition: background-color 0.2s ease;
-        margin-left: 2rem;
+        margin-left: auto;
     }
 
     .cta-button:hover {
@@ -54,20 +55,22 @@ links.sort((a, b) => (a.href === '/' ? -1 : b.href === '/' ? 1 : 0));
 
     h1 {
         margin:0;
-        margin-right: auto;
         margin-left: 2%;
+        margin-right: auto;
         padding:0;
     }
 
     li, a {
         font-family: var(--font-public);
-        display: inline-block;
-        transition: all 0.3s easea 0s;
         text-decoration: none;
+        background-size:100%;
+        transition: all 0.5s ease;
     }
 
-    li a:hover{
-        color: blue;
+    li:hover a{
+        border-radius: 5em;
+        background-color: var(--body-bg-color);
+        padding: 0.6em 1.5em;
     }
 
 

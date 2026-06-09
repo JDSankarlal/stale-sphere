@@ -1,4 +1,8 @@
+:root{
+  --header-bg-color: white;
+  --body-bg-color: #eef1f6;
 
+}
 /* Box sizing rules */
 *,
 *::before,
@@ -33,6 +37,7 @@ ol[role='list'] {
 body {
   min-height: 100vh;
   line-height: 1.5;
+  background-color: var(--body-bg-color);
 }
 
 /* Set shorter line heights on headings and interactive elements */

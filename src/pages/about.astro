@@ -1,3 +1,32 @@
 --- 
+import Layout from '../layouts/Layout.astro';
+import CampaignBlock from '../components/CampaignBlock.astro';
 export const pageTitle = "About";
 ---
+<Layout pageTitle = {pageTitle}>
+</Layout>
+<div class = "card-grid">
+    <CampaignBlock title = "Meet Alex", blockText = "Alex Ilijoski works as an Ambulance Communications Officer and is a strong advocate for workers’ rights.
+
+<br><br>Alex and his family moved to Tecumseh due to the unaffordable housing market in Toronto. His family fell in love with the area, its small-town charm, beautiful outdoor spaces, and a close-knit community. Alex has lived in Ward 3 for over 20 years
+
+<br><br>Alex currently works as an Ambulance Communications Officer at the Windsor Ambulance Communications Centre, taking emergency medical calls and dispatching ambulances to service the public. Since joining the Ontario Public Service Employees Union, Alex has thrust himself into the union and labour movement in the city. Alex is a union steward for OPSEU Local 154, a delegate for the Windsor Labour & District Council and former local treasurer and secretary.
+
+<br><br>Alex has also served on several local boards and committees. He is currently on the board of directors for the Optimist Club of St. Clair Beach and Essex County Youth Diversion and formerly served on the Windsor-Essex Regional Chamber of Commerce’s Event Committee and the 2024 Windsor-Essex Federal Youth Council.
+
+<br><br>Alex also volunteers with several organizations ranging from: Big Brothers Big Sisters of Windsor-Essex, The Village of Aspen Lake, Windsor-Essex Children's Aid Society, Ontario Corps and the Ontario Health Coalition.
+">
+
+<p> TEST TEST TEST </p> 
+</CampaignBlock>
+
+</div>
+
+
+<style>
+ .card-grid {
+        max-width: 90%;
+        gap: 16px;
+        margin: 0 auto;
+    }
+</style>

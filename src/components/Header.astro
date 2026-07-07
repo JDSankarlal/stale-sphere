@@ -8,7 +8,11 @@ const links = Object.entries(pages).map(([filePath, module]) => {
 links.sort((a, b) => (a.href === '/' ? -1 : b.href === '/' ? 1 : 0));
 ---
 <nav>
-    <h1> Alex Ilijoski </h1>
+    <div class="candidate-name">
+        <h1> Alex Ilijoski </h1>
+        <h2> Ready to Work </h2>
+    </div>
+    
     <ul>
         {links.map((link) => (
             <li>
@@ -20,6 +24,15 @@ links.sort((a, b) => (a.href === '/' ? -1 : b.href === '/' ? 1 : 0));
 </nav>
 
 <style>
+
+    .candidate-name
+    {
+        display:flex;
+        flex-direction: column;
+        align-items:flex-start;
+        flex-shrink: 1;
+    }
+    
     nav {
         display: flex;
         align-items: center;
@@ -30,11 +43,13 @@ links.sort((a, b) => (a.href === '/' ? -1 : b.href === '/' ? 1 : 0));
         width: 100;
     }
 
-    ul {
+     ul {
         display: flex;
         list-style: none;
         gap: 6rem;
         font-weight: 700;
+        flex: 1;
+        justify-content: center;
     }
 
     .cta-button {
@@ -53,10 +68,8 @@ links.sort((a, b) => (a.href === '/' ? -1 : b.href === '/' ? 1 : 0));
         background-color: color-mix(in srgb, #2563eb, black 15%);
     }
 
-    h1 {
+    h1, h2 {
         margin:0;
-        margin-left: 2%;
-        margin-right: auto;
         padding:0;
     }
 

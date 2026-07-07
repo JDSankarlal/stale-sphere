@@ -2,6 +2,7 @@
 import Header from "../components/Header.astro"
 import { Font } from "astro:assets";
 import '../styles/global.css'
+const { pageTitle } = Astro.props;
 ---
 <!doctype html>
 <html lang="en">
@@ -12,6 +13,7 @@ import '../styles/global.css'
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<link rel="icon" href="/favicon.ico" />
+		<title>{pageTitle}</title>
 	</head>
 	<header>
 		<Header/>

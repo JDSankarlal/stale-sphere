@@ -33,6 +33,15 @@ ol[role='list'] {
   list-style: none;
 }
 
+/* Style lists injected into card body via set:html (Astro scoped styles can't reach them) */
+.block-text ul,
+.block-text ol {
+  font-family: var(--source-sans-3);
+  color: #5c5852;
+  padding-inline-start: 1.25rem;
+  margin: 0.5rem 0;
+}
+
 /* Set core body defaults */
 body {
   min-height: 100vh;

@@ -42,7 +42,9 @@ import {Image} from 'astro:assets';
 <section class = "flat-card-container">
     <div class = "flat-card">
         <div class = "flat-card-text"> 
-            <h2> { title } </h2>
+            <h2> 
+                <a href={"/platform"}>{ title }</a>
+            </h2>
             <p> <Fragment set:html={blockText}/> </p>
             <slot />
         </div>

@@ -9,24 +9,24 @@ export const pageTitle = "Home";
 
 <Layout pageTitle={pageTitle}>
     <div class = "card-grid">
-        <CampaignBlock title = "Show your support!", blockText = "Request a lawn sign to show your support for Alex's campaign for Tecumseh councillor. Lawn sign delivery will start on August 22nd, 2026.
-", imageUrl="https://placehold.co/425x250", imageAlt="Placeholder", imageW="425", imageH="250", imageClass="hero-image">
+        <CampaignBlock title = "Meet Alex", blockText = "Alex and his family moved to Tecumseh due to the unaffordable housing market in Toronto. His family fell in love with the area, its small-town charm, beautiful outdoor spaces, and a close-knit community.", imageUrl="https://placehold.co/425x250", imageAlt="Placeholder", imageW="425", imageH="250", imageClass="hero-image">
+             <div class="button-group">
+                <a href="/about" class="hero-button sec">Learn More</a>
+            </div>
+        </CampaignBlock>
+          <CampaignBlock title = "Show your support!", blockText = "Request a lawn sign to show your support for Alex's campaign for Tecumseh councillor. Lawn sign delivery will start on August 22nd, 2026.
+">
            <div class="button-group">
                 <a href="/donate" class="hero-button">Get a Lawn Sign</a>
                 <a href="/donate" class="hero-button sec">Donate</a>
                 
             </div>
         </CampaignBlock>
-        <CampaignBlock title = "Meet Alex", blockText = "Alex and his family moved to Tecumseh due to the unaffordable housing market in Toronto. His family fell in love with the area, its small-town charm, beautiful outdoor spaces, and a close-knit community.">
-             <div class="button-group">
-                <a href="/about" class="hero-button sec">Learn More</a>
-            </div>
-        </CampaignBlock>
         <CampaignBlock title = "The Platform", blockText = "Find out where Alex stands on the issues that matter to you.">
             <div class = "platform-cards">
-                <FlatCard title = "Transparency", blockText="Test test test test" />
-                <FlatCard title = "Transparency", blockText="Test test test test" />
-                <FlatCard title = "Transparency", blockText="Test test test test" />
+                <FlatCard title = "Transparency", blockText="Transparency and communication with the public is vital. Here's how Alex will communicate with you." />
+                <FlatCard title = "Political & Community Engagement", blockText="Community is at the heart of municipal government. Read how Alex will reduce barriers so your neighbourhood's voice is heard." />
+                <FlatCard title = "Public Transit", blockText="Our roads are congested and commute times are long. Read how Alex would advocate for better." />
             </div>
         </CampaignBlock>
     </div>
@@ -34,7 +34,6 @@ export const pageTitle = "Home";
 
 <style>
 
-   
     body{
         background-color: --body-bg-color;
     }
@@ -78,10 +77,8 @@ export const pageTitle = "Home";
 
     .card-grid {
         display: grid;
-        max-width: 90%;
         grid-template-columns: repeat(3, 1fr);
         gap: 16px;
-        margin: 0 auto;
     }
 
     .card-grid :global(.hero-image)
@@ -133,8 +130,5 @@ figure, blockquote, dl, dd {
     padding:26px 26px 26px 26px;
 }
 
-body {
-    margin: 0;
-}
 
 </style>

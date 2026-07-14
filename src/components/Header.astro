@@ -1,30 +1,30 @@
----
-const pages = import.meta.glob<{pageTitle: string}>('../pages/*.astro', {eager:true});
-const links = Object.entries(pages).map(([filePath, module]) => {
-    const name = filePath.replace('../pages/','').replace('.astro','');
-    const href = name === 'index' ? '/' : `/${name}`;
-    return { name, href, title: module.pageTitle};
-});
-links.sort((a, b) => (a.href === '/' ? -1 : b.href === '/' ? 1 : 0));
----
 <nav>
     <div class="candidate-name">
         <h1> Alex Ilijoski </h1>
         <h2> Ready to Work </h2>
     </div>
     
-    <ul>
-        {links.map((link) => (
+    <ul>        
             <li>
-                <a href = {link.href}>{link.title}</a>
+                <a href = "/"}>Home</a>
             </li>
-        ))}
+             <li>
+                <a href = "/about"}>About</a>
+            </li>
+             <li>
+                <a href = "/donate"}>Donate</a>
+            </li>
+       
     </ul>
     <a href="/volunteer" class="cta-button">Get a Lawn Sign →</a>
 </nav>
 
 <style>
 
+     body{
+        margin:0;
+    }
+   
     .candidate-name
     {
         display:flex;

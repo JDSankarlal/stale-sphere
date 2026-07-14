@@ -47,6 +47,13 @@ body {
   min-height: 100vh;
   line-height: 1.5;
   background-color: var(--body-bg-color);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Let main content grow so the footer is pushed to the bottom on short pages */
+main {
+  flex: 1;
 }
 
 /* Set shorter line heights on headings and interactive elements */

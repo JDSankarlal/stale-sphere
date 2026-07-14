@@ -1,4 +1,15 @@
----
-export const pageTitle = "Donate";
 --- 
+import Layout from '../layouts/Layout.astro';
+import CampaignBlock from '../components/CampaignBlock.astro';
+export const pageTitle = "Lawn Sign";
+---
+<Layout pageTitle={pageTitle}>
+    <CampaignBlock title="Make a contribution!", blockText="Your contribution will help Alex reach more voters. <br><br> <strong>Donations can be made by e-transfer to: a.ilijoski@hotmail.com </strong><br><br>
+    
+    Donations will only be used to purchase lawn signs, literature material and website expenses. Your donations will help Alex in reaching more voters across Ward 3, building a robust grassroots campaign and sharing Alex's platform so voters can make an educated decision on Election Day.
+    
+    Donations can also be made by cheque payable to Aleksandar Ilijoski.
+    "/>
 
+    
+</Layout>

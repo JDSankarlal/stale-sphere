@@ -3,13 +3,15 @@ import CampaignBlock from '../components/CampaignBlock.astro';
 import FlatCard from '../components/FlatCard.astro'
 import Layout from '../layouts/Layout.astro';
 export const pageTitle = "Home";
+import alexMain from '../assets/images/alex_main.jpg';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
 
 <Layout pageTitle={pageTitle}>
     <div class = "card-grid">
-        <CampaignBlock title = "Meet Alex", blockText = "Alex and his family moved to Tecumseh due to the unaffordable housing market in Toronto. His family fell in love with the area, its small-town charm, beautiful outdoor spaces, and a close-knit community.", imageUrl="https://placehold.co/425x250", imageAlt="Placeholder", imageW="425", imageH="250", imageClass="hero-image">
+        <CampaignBlock title = "Meet Alex", blockText = "Alex and his family moved to Tecumseh due to the unaffordable housing market in Toronto. His family fell in love with the area, its small-town charm, beautiful outdoor spaces, and a close-knit community.", 
+        imageUrl={alexMain}, imageAlt="Placeholder", imageW="425", imageH="250", imageClass="hero-image">
              <div class="button-group">
                 <a href="/about" class="hero-button sec">Learn More</a>
             </div>
@@ -24,9 +26,13 @@ export const pageTitle = "Home";
         </CampaignBlock>
         <CampaignBlock title = "The Platform", blockText = "Find out where Alex stands on the issues that matter to you.">
             <div class = "platform-cards">
-                <FlatCard title = "Transparency", blockText="Transparency and communication with the public is vital. Here's how Alex will communicate with you." />
-                <FlatCard title = "Political & Community Engagement", blockText="Community is at the heart of municipal government. Read how Alex will reduce barriers so your neighbourhood's voice is heard." />
-                <FlatCard title = "Public Transit", blockText="Our roads are congested and commute times are long. Read how Alex would advocate for better." />
+                <FlatCard title = "Transparency" href="/platform#transparency" blockText="Transparency and communication with the public is vital. Here's how Alex will communicate with you." />
+                <FlatCard title = "Political & Community Engagement" href="/platform#political-community-engagement" blockText="Community is at the heart of municipal government. Read how Alex will reduce barriers so your neighbourhood's voice is heard." />
+                <FlatCard title = "Public Transit" href="/platform#public-transit" blockText="Our roads are congested and commute times are long. Read how Alex would advocate for better." />
+                <FlatCard title = "Climate Change" href="/platform#climate-change" blockText="Big cities and small towns alike must prepare for climate change. Read Alex's plan to make Tecumseh more resilient." />
+                <FlatCard title = "Affordable Housing & Zoning" href="/platform#affordable-housing-zoning" blockText="Updating decades-old zoning laws can unlock affordable housing. Here's Alex's approach to smart, walkable growth." />
+                <FlatCard title = "Financial Accountability" href="/platform#financial-accountability" blockText="Keeping taxes stable while running a fiscally responsible budget. See how Alex would manage the town's finances." />
+                <FlatCard title = "Outside Investment" href="/platform#outside-investment" blockText="Attracting and retaining investment for the Town of Tecumseh. Read Alex's plan to make use of our location." />
             </div>
         </CampaignBlock>
     </div>
@@ -102,14 +108,16 @@ export const pageTitle = "Home";
 
     .platform-cards
     {
-        display: flex;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
         gap: 16px;
         width: 100%;
     }
 
     .platform-cards > :global(section)
     {
-        flex: 1;
+        height: 100%;
+        margin-top: 0;
     }
 
     @media (max-width: 600px) {

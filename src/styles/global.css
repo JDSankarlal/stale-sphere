@@ -1,7 +1,12 @@
 :root{
-  --header-bg-color: white;
-  --body-bg-color: #eef1f6;
-  --accent-color: #2563eb;
+  /* Brand colours pulled from the candidate card */
+  --navy: #012d68;
+  --orange: #f0772b;
+  --sky-blue: #159bcb;
+
+  --header-bg-color: var(--navy);
+  --body-bg-color: #dceaf6;
+  --accent-color: var(--orange);
 
 }
 /* Box sizing rules */

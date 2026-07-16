@@ -55,7 +55,7 @@
     }
 
     .cta-button {
-        background-color: #2563eb;
+        background-color: var(--accent-color);
         color: white;
         padding: 0.5rem 1rem;
         border-radius: 5px;
@@ -67,17 +67,19 @@
     }
 
     .cta-button:hover {
-        background-color: color-mix(in srgb, #2563eb, black 15%);
+        background-color: color-mix(in srgb, var(--accent-color), black 15%);
     }
 
     h1, h2 {
         margin:0;
         padding:0;
+        color: #ffffff;
     }
 
     li, a {
         font-family: var(--font-public);
         text-decoration: none;
+        color: #ffffff;
         background-size:100%;
         transition: all 0.5s ease;
     }
@@ -85,6 +87,7 @@
     li:hover a{
         border-radius: 5em;
         background-color: var(--body-bg-color);
+        color: var(--navy);
         padding: 0.6em 1.5em;
     }
 

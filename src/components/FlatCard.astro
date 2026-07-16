@@ -1,5 +1,5 @@
 ---
-const { title, blockText} = Astro.props;
+const { title, blockText, href="/platform"} = Astro.props;
 import '../styles/global.css';
 import {Image} from 'astro:assets';
 ---
@@ -43,7 +43,7 @@ import {Image} from 'astro:assets';
     <div class = "flat-card">
         <div class = "flat-card-text"> 
             <h2> 
-                <a href={"/platform"}>{ title }</a>
+                <a href={href}>{ title }</a>
             </h2>
             <p> <Fragment set:html={blockText}/> </p>
             <slot />

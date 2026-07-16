@@ -1,5 +1,5 @@
 ---
-const { title, blockText, imageUrl="", imageAlt="", imageW="", imageH="", imageClass=""} = Astro.props;
+const { title, blockText, id="", imageUrl="", imageAlt="", imageW="", imageH="", imageClass=""} = Astro.props;
 import '../styles/global.css';
 import {Image} from 'astro:assets';
 ---
@@ -55,7 +55,7 @@ import {Image} from 'astro:assets';
 
 </style> 
 
-<section class = "block-container">
+<section class = "block-container" id={id || undefined}>
     <div class = "block">
         <div class = "block-text"> 
             <h2> { title } </h2>

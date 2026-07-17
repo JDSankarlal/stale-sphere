@@ -3,7 +3,7 @@ import CampaignBlock from '../components/CampaignBlock.astro';
 import FlatCard from '../components/FlatCard.astro'
 import Layout from '../layouts/Layout.astro';
 export const pageTitle = "Home";
-import alexMain from '../assets/images/alex_main.jpg';
+import alexHero from '../assets/images/alex_hero_v2.jpg';
 // Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
 // Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
 ---
@@ -11,7 +11,7 @@ import alexMain from '../assets/images/alex_main.jpg';
 <Layout pageTitle={pageTitle}>
     <div class = "card-grid">
         <CampaignBlock title = "Meet Alex", blockText = "Alex and his family moved to Tecumseh due to the unaffordable housing market in Toronto. His family fell in love with the area, its small-town charm, beautiful outdoor spaces, and a close-knit community.", 
-        imageUrl={alexMain}, imageAlt="Placeholder", imageW="425", imageH="250", imageClass="hero-image">
+        imageUrl={alexHero}, imageAlt="Alex Ilijoski", imageW="425", imageH="250", imageClass="hero-image">
              <div class="button-group">
                 <a href="/about" class="hero-button sec">Learn More</a>
             </div>

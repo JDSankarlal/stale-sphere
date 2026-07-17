@@ -1,15 +1,33 @@
---- 
+---
 import Layout from '../layouts/Layout.astro';
 import CampaignBlock from '../components/CampaignBlock.astro';
-export const pageTitle = "Lawn Sign";
+export const pageTitle = "Donate";
 ---
 <Layout pageTitle={pageTitle}>
-    <CampaignBlock title="Make a contribution!", blockText="Your contribution will help Alex reach more voters. <br><br> <strong>Donations can be made by e-transfer to: a.ilijoski@hotmail.com </strong><br><br>
-    
-    Donations will only be used to purchase lawn signs, literature material and website expenses. Your donations will help Alex in reaching more voters across Ward 3, building a robust grassroots campaign and sharing Alex's platform so voters can make an educated decision on Election Day.
-    
-    Donations can also be made by cheque payable to Aleksandar Ilijoski.
-    "/>
+    <div class="content-blocks">
+        <CampaignBlock title="Make a contribution!", blockText="Your contribution will help Alex reach more voters. Donations will only be used to purchase lawn signs, literature material and website expenses. Your donations will help Alex in reaching more voters across Ward 3, building a robust grassroots campaign and sharing Alex&rsquo;s platform so voters can make an educated decision on Election Day.
+        <br><br>
+        <strong>Donations can be made by e-transfer to:</strong> <a href='mailto:a.ilijoski@hotmail.com'>a.ilijoski@hotmail.com</a>
+        <br><br>
+        Donations can also be made by cheque payable to Aleksandar Ilijoski. <em>*see contribution rules below</em>
+        " />
 
-    
+        <CampaignBlock id="contribution-rules" title="Contribution Rules", blockText="
+        <ul>
+            <li>Contributions are <strong>NOT</strong> tax deductible</li>
+            <li>You may contribute a maximum of $1,200 to a single candidate (These amounts include the value of any goods or services donated to the campaign.)</li>
+            <li>You may not contribute more than $5,000 in total to candidates running for offices on the same council or school board, or to third-party advertisers who are registered in the same municipality.</li>
+            <li>Any person who is normally a resident of Ontario can make a contribution to a candidate&rsquo;s campaign or contribute to a third-party advertiser to help fund their advertisements.</li>
+            <li>Corporations carrying on business in Ontario, and trade unions that hold bargaining rights for employees in Ontario, are not permitted to make contributions to candidates in municipal elections in Ontario. However, they may contribute to third party advertisers.</li>
+            <li>Entities that are not corporations such as neighbourhood associations, clubs or professional associations, such as fire or police associations, are not eligible to make financial contributions to candidates or third-party advertisers. Members may contribute individually.</li>
+        </ul>
+        " />
+    </div>
 </Layout>
+
+<style>
+    .content-blocks {
+        display: grid;
+        gap: 16px;
+    }
+</style>

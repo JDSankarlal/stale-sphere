@@ -1,32 +1,183 @@
---- 
+---
 import Layout from '../layouts/Layout.astro';
 import CampaignBlock from '../components/CampaignBlock.astro';
+import { Image } from 'astro:assets';
+import alexBio from '../assets/images/alex_bio.jpg';
+import alexCommunity from '../assets/images/alex_community.jpg';
+import alexLabour from '../assets/images/alex_labour.jpg';
 export const pageTitle = "About";
 ---
 <Layout pageTitle = {pageTitle}>
     <div class = "card-grid">
-        <CampaignBlock title = "Meet Alex", blockText = "Alex Ilijoski works as an Ambulance Communications Officer and is a strong advocate for workers’ rights.
-        
+        <CampaignBlock title = "Meet Alex", imageUrl={alexBio} imageAlt="Alex Ilijoski" imageW="330" imageH="495" imageClass="bio-photo" blockText = "Alex Ilijoski works as an Ambulance Communications Officer and is a strong advocate for workers’ rights.
+
         <br><br>Alex and his family moved to Tecumseh due to the unaffordable housing market in Toronto. His family fell in love with the area, its small-town charm, beautiful outdoor spaces, and a close-knit community. Alex has lived in Ward 3 for over 20 years
-        
+
         <br><br>Alex currently works as an Ambulance Communications Officer at the Windsor Ambulance Communications Centre, taking emergency medical calls and dispatching ambulances to service the public. Since joining the Ontario Public Service Employees Union, Alex has thrust himself into the union and labour movement in the city. Alex is a union steward for OPSEU Local 154, a delegate for the Windsor Labour & District Council and former local treasurer and secretary.
-        
+
         <br><br>Alex has also served on several local boards and committees. He is currently on the board of directors for the Optimist Club of St. Clair Beach and Essex County Youth Diversion and formerly served on the Windsor-Essex Regional Chamber of Commerce’s Event Committee and the 2024 Windsor-Essex Federal Youth Council.
-        
+
         <br><br>Alex also volunteers with several organizations ranging from: Big Brothers Big Sisters of Windsor-Essex, The Village of Aspen Lake, Windsor-Essex Children's Aid Society, Ontario Corps and the Ontario Health Coalition.
-        ">
-        
-        <p> TEST TEST TEST </p> 
-    </CampaignBlock>
-    
-</div>
+        " />
+
+        <CampaignBlock id = "community-involvement" title = "Community Involvement">
+            <div class="section-lead">
+                <Image class="section-photo" src={alexCommunity} alt="Alex volunteering at a community event" />
+                <p>Beyond the council table, Alex is active throughout Windsor-Essex — volunteering, supporting local families, and serving on the boards of several community clubs and organizations.</p>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Organization</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>March 2012</td><td>December 2019</td><td>The Village of Aspen Lake</td><td>Volunteer</td></tr>
+                        <tr><td>November 2018</td><td>present</td><td>Windsor-Essex Children's Aid Society</td><td>Christmas Family Sponsor</td></tr>
+                        <tr><td>May 2021</td><td>July 2025</td><td>Big Brothers Big Sisters of Windsor Essex</td><td>Volunteer</td></tr>
+                        <tr><td>July 2023</td><td>present</td><td>Optimist Club of St. Clair Beach</td><td>Volunteer</td></tr>
+                        <tr><td>September 2023</td><td>present</td><td>EC Youth Diversion</td><td>Board Secretary</td></tr>
+                        <tr><td>December 2023</td><td>present</td><td>Ontario Health Coalition</td><td>Member</td></tr>
+                        <tr><td>January 2024</td><td>present</td><td>Optimist Club of St Clair Beach</td><td>Board Director</td></tr>
+                        <tr><td>March 2024</td><td>March 2025</td><td>Windsor-Essex Federal Youth Council</td><td>Advisor</td></tr>
+                        <tr><td>June 2024</td><td>May 2025</td><td>Windsor-Essex Regional Chamber of Commerce</td><td>Event Committee Member</td></tr>
+                        <tr><td>June 2026</td><td>present</td><td>Ontario Corps</td><td>Volunteer</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </CampaignBlock>
+
+        <CampaignBlock id = "labour-advocacy" title = "Labour Advocacy">
+            <div class="section-lead">
+                <Image class="section-photo" src={alexLabour} alt="Alex at a labour advocacy rally" />
+                <p>A steward and delegate for OPSEU Local 154, Alex is deeply involved in the union and the broader labour movement across Windsor-Essex.</p>
+            </div>
+            <div class="table-wrap">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Start Date</th>
+                            <th>End Date</th>
+                            <th>Organization</th>
+                            <th>Role</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr><td>May 2021</td><td>February 2023</td><td>Windsor Regional Hospital Met Campus<span class="sub">Joint Health and Safety Committee</span></td><td>Management Co-Chair</td></tr>
+                        <tr><td>June 2023</td><td>June 2026</td><td>Central Ambulance Communications Centre<span class="sub">Joint Health and Safety Committee</span></td><td>Employee Member</td></tr>
+                        <tr><td>February 2024</td><td>March 2026</td><td>OPSEU Local 154</td><td>Secretary</td></tr>
+                        <tr><td>February 2024</td><td>present</td><td>OPSEU Local 154</td><td>Union Steward</td></tr>
+                        <tr><td>April 2024</td><td>present</td><td>Windsor Labour & District Council</td><td>OPS Local 154 Delegate</td></tr>
+                        <tr><td>April 2024</td><td>present</td><td>OPS Area 1 Council</td><td>OPS Local 154 Delegate</td></tr>
+                        <tr><td>August 2024</td><td>December 2024</td><td>OPS Unified Area 1 Coordinating Group</td><td>Vice-Chair</td></tr>
+                        <tr><td>October 2024</td><td>March 2025</td><td>OPS Unified</td><td>Mobilizer</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </CampaignBlock>
+    </div>
 
 
 <style>
     .card-grid {
-        max-width: 90%;
+        display: grid;
         gap: 16px;
+        max-width: 90%;
         margin: 0 auto;
+    }
+
+    .card-grid :global(.block-container .bio-photo) {
+        border-radius: 10px;
+        object-fit: cover;
+        align-self: flex-start;
+        margin-left: 1.75rem;
+    }
+
+    .section-lead {
+        margin-bottom: 1.5rem;
+    }
+
+    .section-lead::after {
+        content: "";
+        display: block;
+        clear: both;
+    }
+
+    .section-lead p {
+        font-family: var(--source-sans-3);
+        color: #5c5852;
+        margin: 0;
+    }
+
+    .card-grid :global(.section-photo) {
+        float: right;
+        width: 300px;
+        max-width: 42%;
+        height: auto;
+        border-radius: 10px;
+        margin: 0 0 1rem 1.5rem;
+    }
+
+    /* Allow the card's flex/grid ancestors to shrink below the table's
+       intrinsic width so .table-wrap can scroll instead of overflowing. */
+    .card-grid :global(.block-container),
+    .card-grid :global(.block),
+    .card-grid :global(.block-text) {
+        min-width: 0;
+    }
+
+    .table-wrap {
+        clear: both;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    @media (max-width: 600px) {
+        .card-grid :global(.block-container .bio-photo) {
+            margin: 0 auto 1rem auto;
+        }
+        .card-grid :global(.section-photo) {
+            float: none;
+            width: 100%;
+            max-width: 100%;
+            margin: 0 0 1rem 0;
+        }
+    }
+
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        font-family: var(--source-sans-3);
+        color: #5c5852;
+    }
+
+    th {
+        text-align: left;
+        font-weight: 700;
+        color: #1a1917;
+        padding: 0.75rem 1rem;
+        border-bottom: 2px solid #e2e7f0;
+        white-space: nowrap;
+    }
+
+    td {
+        padding: 0.75rem 1rem;
+        border-bottom: 1px solid #e2e7f0;
+        vertical-align: top;
+    }
+
+    tbody tr:nth-child(even) {
+        background-color: #f7f9fc;
+    }
+
+    .sub {
+        display: block;
+        font-size: 0.85em;
+        color: #8a857d;
     }
 </style>
 </Layout>
